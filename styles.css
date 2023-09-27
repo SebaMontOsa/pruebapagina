@@ -5,63 +5,98 @@ body {
     padding: 0;
     background-color: #f0f0f0;
     color: #333;
-    transition: background-color 0.5s, color 0.5s;
+    transition: background-color 750ms, color 750ms;
 }
 
 header {
-    background-color: #007BFF;
-    color: #fff;
+    background-color: orange;
+    color: black;
     padding: 20px;
     text-align: center;
+    transition: background-color 750ms, color 750ms;
 }
 
 header h1 {
     margin: 0;
 }
 
+h2{
+    font-size: 30px;
+    transition: color 750ms;
+}
+
 main {
     max-width: 800px;
     margin: 20px auto;
     padding: 20px;
-    background-color: #fff;
+    background-color: rgb(251, 208, 130);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    flex-direction: column;
+    transition: background-color 750ms, color 750ms;
+    
+    
 }
 
 /* Estilos del modo oscuro */
 body.dark-mode {
     background-color: #333;
-    color: #fff;
+    color: orange;
+    
 }
 
-.dark-mode header {
+.dark-mode header, .dark-mode footer, .dark-mode main{
     background-color: #222;
+    color: orange; 
+}
+
+.dark-mode li, .dark-mode h2{
+    color: orange;
+    transition: color 750ms;
 }
 
 /* Botón de Modo Oscuro */
+.dark-mode #dark-mode-toggle {
+    color:orange;
+}
 #dark-mode-toggle {
     background-color: transparent;
-    border: none;
-    color: #007BFF;
+    border: solid;
+    border-radius: 20px;
     cursor: pointer;
+    color:black;
+    position: absolute;
+    top:25px;
+    right: 20px; 
 }
 
 /* Estilos de los datos de contacto */
 .contact-info h2 {
     margin-top: 0;
+    text-align: center;
+    color: black;
 }
 
 .contact-info ul {
     list-style: none;
     padding: 0;
+    text-align: center;
+    color: black;
+
 }
 
 .contact-info li {
     margin: 10px 0;
+    transition: color 750ms;
 }
 
 footer {
     text-align: center;
     padding: 10px;
-    background-color: #007BFF;
-    color: #fff;
+    background-color: orange;
+    color: black;
+    position: absolute; /* Cambia el posicionamiento a absoluto */
+    bottom: 0; /* Lo fija en la parte inferior de su contenedor */
+    width: 100%; /* Ancho completo */
+    transition: background-color 750ms, color 750ms;
+    
 }
